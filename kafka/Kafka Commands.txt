@@ -1,0 +1,24 @@
+command for running zookeeper
+.\bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+
+command for running Kafka Broker (run after starting zookeeper)
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+Command to create Kafka topics
+.\bin\windows\kafka-topics.bat --create --topic test-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+
+
+Command to list all topics in Kafka
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+
+
+Command to stop Kafka Broker
+.\bin\windows\kafka-server-stop.bat
+
+command to stop zookeeper
+.\bin\windows\zookeeper-server-stop.bat
+
